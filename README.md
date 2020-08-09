@@ -28,7 +28,7 @@ npm start
 
 ## APIs Documentation.
 
-### Get all awailable slots for the given date
+### 1.) Get all available slots for the given date
 
 ```http
 POST :  /api/v1/appointments/free-slots
@@ -59,7 +59,7 @@ POST :  /api/v1/appointments/free-slots
 ]
 ```
 
-### Book an Appointment
+### 2.) Book an Appointment
 
 ```http
 POST :  /api/v1/appointments/bookAppointment
@@ -83,7 +83,7 @@ POST :  /api/v1/appointments/bookAppointment
 }
 ```
 
-### Get Booked Appointments in Between 2 dates
+### 3.) Get Booked Appointments in Between 2 dates
 
 ```http
 POST :  /api/v1/appointments/getAppointmentsInBetweenDates
