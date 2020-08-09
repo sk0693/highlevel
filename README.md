@@ -32,15 +32,15 @@ npm start
 
 ```http
 POST :  /api/v1/appointments/free-slots
-``` 
+```
 
-
-| Parameter  | Type     | Description                           |
-| :--------- | :------- | :------------------------------------ |
-| `date`    | `String` | **Required**.  |
+| Parameter  | Type     | Description   |
+| :--------- | :------- | :------------ |
+| `date`     | `String` | **Required**. |
 | `timezone` | `String` | **Required**. |
 
 #### Responses
+
 ```javascript
 [
     "2020-07-22T22:30:00-07:00",
@@ -59,50 +59,44 @@ POST :  /api/v1/appointments/free-slots
 ]
 ```
 
-###Book an Appointment
-
-POST: /api/v1/appointments/bookAppointment
+### Book an Appointment
 
 ```http
 POST :  /api/v1/appointments/bookAppointment
-``` 
+```
 
-
-| Parameter  | Type     | Description                           |
-| :--------- | :------- | :------------------------------------ |
-| `dateTime`    | `String` | **Required**.  |
+| Parameter  | Type     | Description   |
+| :--------- | :------- | :------------ |
+| `dateTime` | `String` | **Required**. |
 | `timezone` | `String` | **Required**. |
-
-response: {
-    "dateTime": "2020-07-23T11:30:00+05:30",
-    "utcDateTime": 1595484000000
-}
 
 
 #### Responses
+
 ```javascript
 {
-    "dateTime": "2020-07-23T11:30:00+05:30",
-    "utcDateTime": 1595484000000
+    "message": "Appointment booked succesfully",
+    "data": {
+        "dateTime": "2020-07-23T11:30:00+05:30",
+        "utcDateTime": 1595484000000
+    }
 }
 ```
 
 ### Get Booked Appointments in Between 2 dates
 
-POST: api/v1/appointments/getAppointmentsInBetweenDates
-
 ```http
 POST :  /api/v1/appointments/getAppointmentsInBetweenDates
-``` 
+```
 
-
-| Parameter  | Type     | Description                           |
-| :--------- | :------- | :------------------------------------ |
-| `startDate`    | `String` | **Required**.  |
-| `endDate`    | `String` | **Required**.  |
-| `timezone` | `String` | **Optional**. |
+| Parameter   | Type     | Description   |
+| :---------- | :------- | :------------ |
+| `startDate` | `String` | **Required**. |
+| `endDate`   | `String` | **Required**. |
+| `timezone`  | `String` | **Optional**. |
 
 #### Responses
+
 ```javascript
 {
     "startDate": "2020-07-22T11:30:00-07:00",

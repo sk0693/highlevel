@@ -84,10 +84,15 @@ const bookAppointment = async (req, res) => {
             duration,
         });
 
-        return res.status(httpStatus.OK).send({
-            dateTime,
-            utcDateTime
-        });
+        const response = {
+            message: "Appointment booked succesfully",
+            data: {
+                dateTime,
+                utcDateTime
+            }
+        }
+
+        return res.status(httpStatus.OK).send(response);
     } catch (error) {
         logger.error(error);
         res.status(httpStatus.BAD_REQUEST).send(error);
