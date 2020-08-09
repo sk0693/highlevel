@@ -28,7 +28,7 @@ npm start
 
 ## APIs Documentation.
 
-### 1.) Get all awailable slots for the given date
+### 1.) Get all available slots for the given date
 
 ```http
 POST :  /api/v1/appointments/free-slots
